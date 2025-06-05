@@ -1,7 +1,8 @@
-target/
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+src/main/resources/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -11,6 +12,8 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/
+/.idea/
 
 ### Eclipse ###
 .apt_generated
@@ -28,6 +31,9 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
+.build/
+
+/.build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
