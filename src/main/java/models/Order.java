@@ -9,8 +9,12 @@ import java.util.List;
 public class Order {
     private List<String> ingredients;
 
-    @Step("Создание заказа с ингредиентами: {ingredients}")
     public Order(List<String> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    @Step("Создание заказа с ингредиентами")
+    public static Order create(List<String> ingredients) {
+        return new Order(ingredients);
     }
 }

@@ -30,7 +30,7 @@ public class OrderTest {
     public void setUp() {
         authClient = new AuthClient();
         orderClient = new OrderClient();
-        user = new User(
+        user = User.create(
                 RandomDataGenerator.getRandomEmail(),
                 RandomDataGenerator.getRandomPassword(),
                 RandomDataGenerator.getRandomName()
@@ -47,7 +47,7 @@ public class OrderTest {
     @Test
     @DisplayName("Создание заказа с авторизацией")
     public void createOrderWithAuth() {
-        Order order = new Order(ingredients);
+        Order order = Order.create(ingredients);
         Response response = orderClient.create(order, accessToken);
         response.then()
                 .statusCode(200)
@@ -67,7 +67,7 @@ public class OrderTest {
     @Test
     @DisplayName("Создание заказа без ингредиентов")
     public void createOrderWithoutIngredients() {
-        Order order = new Order(null);
+        Order order = Order.create(null);
         Response response = orderClient.create(order, accessToken);
         response.then()
                 .statusCode(400)

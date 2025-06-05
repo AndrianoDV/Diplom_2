@@ -19,7 +19,7 @@ public class AuthTest {
     @Before
     public void setUp() {
         authClient = new AuthClient();
-        user = new User(
+        user = User.create(
                 RandomDataGenerator.getRandomEmail(),
                 RandomDataGenerator.getRandomPassword(),
                 RandomDataGenerator.getRandomName()
