@@ -47,7 +47,7 @@ public class UserTest {
     @Test
     @DisplayName("Обновление email пользователя")
     public void updateUserEmail() {
-        user.setEmail("newemail@example.com");
+        user.setEmail("newemail@yandex.ru");
         Response response = authClient.update(user, accessToken);
         response.then()
                 .statusCode(200)
