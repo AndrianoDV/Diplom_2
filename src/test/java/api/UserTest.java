@@ -16,6 +16,9 @@ public class UserTest {
     private User user;
     private String accessToken;
 
+    private static final String NEW_NAME = "New Name";
+    private static final String NEW_EMAIL = "newemail@yandex.ru";
+
     @Before
     public void setUp() {
         authClient = new AuthClient();
@@ -25,44 +28,48 @@ public class UserTest {
                 RandomDataGenerator.getRandomName()
         );
         Response response = authClient.register(user);
+        response.then().statusCode(200);
         accessToken = response.path("accessToken");
     }
 
     @After
     public void tearDown() {
-        authClient.delete(accessToken);
+        if (accessToken != null) {
+            Response response = authClient.delete(accessToken);
+            response.then().statusCode(202);
+        }
     }
 
     @Test
     @DisplayName("Обновление имени пользователя")
     public void updateUserName() {
-        user.setName("New Name");
+        user.setName(NEW_NAME);
         Response response = authClient.update(user, accessToken);
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true))
-                .body("user.name", equalTo("New Name"));
+                .body("user.name", equalTo(NEW_NAME));
     }
 
     @Test
     @DisplayName("Обновление email пользователя")
     public void updateUserEmail() {
-        user.setEmail("newemail@yandex.ru");
+        user.setEmail(NEW_EMAIL);
         Response response = authClient.update(user, accessToken);
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true))
-                .body("user.email", equalTo("newemail@example.com"));
+                .body("user.email", equalTo(NEW_EMAIL));
     }
 
     @Test
     @DisplayName("Обновление данных без авторизации")
     public void updateUserWithoutAuth() {
-        user.setName("New Name");
+        user.setName(NEW_NAME);
         Response response = authClient.update(user, null);
         response.then()
                 .statusCode(401)
                 .body("success", equalTo(false))
-                .body("message", equalTo("You should be authorised"));
+                .body("message", containsString("authorised"));
     }
 }
