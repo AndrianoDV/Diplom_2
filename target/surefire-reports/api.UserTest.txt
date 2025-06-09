@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: api.UserTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.737 s - in api.UserTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.915 s - in api.UserTest
