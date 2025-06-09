@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="api.UserTest" time="5.294" tests="3" errors="1" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="api.UserTest" time="4.737" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.26_4\bin"/>
-    <property name="sun.java.command" value="C:\Users\A\AppData\Local\Temp\surefire1168245099941815684\surefirebooter16117697334584390032.jar C:\Users\A\AppData\Local\Temp\surefire1168245099941815684 2025-06-09T09-50-52_983-jvmRun1 surefire15601283599797224626tmp surefire_017451037274195625149tmp"/>
+    <property name="sun.java.command" value="C:\Users\A\AppData\Local\Temp\surefire13034255908432273060\surefirebooter4832177122109370862.jar C:\Users\A\AppData\Local\Temp\surefire13034255908432273060 2025-06-09T10-38-46_141-jvmRun1 surefire5357717914959741390tmp surefire_014134353790615738246tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\cygwin64\home\Diplom\Diplom_2\target\test-classes;C:\cygwin64\home\Diplom\Diplom_2\target\classes;C:\Users\A\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\A\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\A\.m2\repository\io\rest-assured\rest-assured\4.5.1\rest-assured-4.5.1.jar;C:\Users\A\.m2\repository\org\codehaus\groovy\groovy\3.0.9\groovy-3.0.9.jar;C:\Users\A\.m2\repository\org\codehaus\groovy\groovy-xml\3.0.9\groovy-xml-3.0.9.jar;C:\Users\A\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\A\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\A\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\A\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\A\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\A\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\A\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\A\.m2\repository\io\rest-assured\json-path\4.5.1\json-path-4.5.1.jar;C:\Users\A\.m2\repository\org\codehaus\groovy\groovy-json\3.0.9\groovy-json-3.0.9.jar;C:\Users\A\.m2\repository\io\rest-assured\rest-assured-common\4.5.1\rest-assured-common-4.5.1.jar;C:\Users\A\.m2\repository\io\rest-assured\xml-path\4.5.1\xml-path-4.5.1.jar;C:\Users\A\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\A\.m2\repository\io\qameta\allure\allure-junit4\2.13.9\allure-junit4-2.13.9.jar;C:\Users\A\.m2\repository\io\qameta\allure\allure-java-commons\2.13.9\allure-java-commons-2.13.9.jar;C:\Users\A\.m2\repository\io\qameta\allure\allure-model\2.13.9\allure-model-2.13.9.jar;C:\Users\A\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\A\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.2\jackson-databind-2.12.2.jar;C:\Users\A\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.2\jackson-annotations-2.12.2.jar;C:\Users\A\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.2\jackson-core-2.12.2.jar;C:\Users\A\.m2\repository\org\apache\tika\tika-core\1.25\tika-core-1.25.jar;C:\Users\A\.m2\repository\org\jooq\joor-java-8\0.9.13\joor-java-8-0.9.13.jar;C:\Users\A\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\A\.m2\repository\io\qameta\allure\allure-rest-assured\2.27.0\allure-rest-assured-2.27.0.jar;C:\Users\A\.m2\repository\io\qameta\allure\allure-attachments\2.27.0\allure-attachments-2.27.0.jar;C:\Users\A\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\A\AppData\Local\Temp\surefire1168245099941815684\surefirebooter16117697334584390032.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\A\AppData\Local\Temp\surefire13034255908432273060\surefirebooter4832177122109370862.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.26+4-LTS"/>
@@ -61,18 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="updateUserName" classname="api.UserTest" time="1.873"/>
-  <testcase name="updateUserWithoutAuth" classname="api.UserTest" time="1.481">
-    <error message="Header value cannot be null" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Header value cannot be null
-	at api.UserTest.updateUserWithoutAuth(UserTest.java:69)
-</error>
-  </testcase>
-  <testcase name="updateUserEmail" classname="api.UserTest" time="1.94">
-    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;403&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <403>.
-
-	at api.UserTest.updateUserEmail(UserTest.java:60)
-]]></failure>
-  </testcase>
+  <testcase name="updateUserName" classname="api.UserTest" time="1.649"/>
+  <testcase name="updateUserWithoutAuth" classname="api.UserTest" time="1.508"/>
+  <testcase name="updateUserEmail" classname="api.UserTest" time="1.579"/>
 </testsuite>

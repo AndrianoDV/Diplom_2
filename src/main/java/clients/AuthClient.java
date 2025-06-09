@@ -3,6 +3,7 @@ package clients;
 import models.User;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
@@ -40,9 +41,14 @@ public class AuthClient {
 
     @Step("Обновление данных пользователя")
     public Response update(User user, String accessToken) {
-        return given()
-                .header("Content-type", "application/json")
-                .header("Authorization", accessToken)
+        RequestSpecification request = given()
+                .header("Content-type", "application/json");
+
+        if (accessToken != null && !accessToken.isEmpty()) {
+            request.header("Authorization", accessToken);
+        }
+
+        return request
                 .body(user)
                 .when()
                 .patch(USER_URL);

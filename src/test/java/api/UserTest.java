@@ -16,9 +16,6 @@ public class UserTest {
     private User user;
     private String accessToken;
 
-    private static final String NEW_NAME = "New Name";
-    private static final String NEW_EMAIL = "newemail@yandex.ru";
-
     @Before
     public void setUp() {
         authClient = new AuthClient();
@@ -43,30 +40,33 @@ public class UserTest {
     @Test
     @DisplayName("Обновление имени пользователя")
     public void updateUserName() {
-        user.setName(NEW_NAME);
+        String newName = "NewName-" + RandomDataGenerator.randomString(5);
+        user.setName(newName);
         Response response = authClient.update(user, accessToken);
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true))
-                .body("user.name", equalTo(NEW_NAME));
+                .body("user.name", equalTo(newName));
     }
 
     @Test
     @DisplayName("Обновление email пользователя")
     public void updateUserEmail() {
-        user.setEmail(NEW_EMAIL);
+        String newEmail = RandomDataGenerator.getRandomEmail();
+        user.setEmail(newEmail);
         Response response = authClient.update(user, accessToken);
         response.then()
                 .statusCode(200)
                 .body("success", equalTo(true))
-                .body("user.email", equalTo(NEW_EMAIL));
+                .body("user.email", equalTo(newEmail));
     }
 
     @Test
-    @DisplayName("Обновление данных без авторизации")
+    @DisplayName("Попытка обновления данных без авторизации")
     public void updateUserWithoutAuth() {
-        user.setName(NEW_NAME);
-        Response response = authClient.update(user, null);
+        String newName = "Unauthorized-" + RandomDataGenerator.randomString(3);
+        user.setName(newName);
+        Response response = authClient.update(user, "");
         response.then()
                 .statusCode(401)
                 .body("success", equalTo(false))

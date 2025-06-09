@@ -17,7 +17,7 @@ public class RandomDataGenerator {
         return "User-" + randomString(6);
     }
 
-    private static String randomString(int length) {
+    public static String randomString(int length) {
         StringBuilder sb = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
             sb.append(CHARS.charAt(ThreadLocalRandom.current().nextInt(CHARS.length())));
@@ -25,6 +25,3 @@ public class RandomDataGenerator {
         return sb.toString();
     }
 }
-
-
-
